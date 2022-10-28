@@ -4,19 +4,30 @@
  */
 package ui;
 
+import java.awt.CardLayout;
+import model.SampleData;
+import model.System;
+
 /**
  *
- * @author USHA SINGH
+ * @author sirip
  */
 public class MainJFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form MainJFrame
      */
+    private System system;
+    
     public MainJFrame() {
         initComponents();
+        initializeData();
     }
+   
 
+    private void initializeData() {
+        system = SampleData.initData();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,105 +37,87 @@ public class MainJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        BtnAdmin = new javax.swing.JButton();
-        BtnUser = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jSplitPane = new javax.swing.JSplitPane();
+        controlJPanel = new javax.swing.JPanel();
+        btnViewUpdate = new javax.swing.JButton();
+        btnTrackAbnormal = new javax.swing.JButton();
+        displayJPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 512, Short.MAX_VALUE)
-        );
+        jSplitPane.setDividerLocation(140);
 
-        jSplitPane1.setRightComponent(jPanel1);
-
-        BtnAdmin.setText("Admin");
-        BtnAdmin.addActionListener(new java.awt.event.ActionListener() {
+        btnViewUpdate.setText("View/Manage");
+        btnViewUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnAdminActionPerformed(evt);
+                btnViewUpdateActionPerformed(evt);
             }
         });
 
-        BtnUser.setText("Patient");
-        BtnUser.addActionListener(new java.awt.event.ActionListener() {
+        btnTrackAbnormal.setText("Track Abnormal");
+        btnTrackAbnormal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnUserActionPerformed(evt);
+                btnTrackAbnormalActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Doctor");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout controlJPanelLayout = new javax.swing.GroupLayout(controlJPanel);
+        controlJPanel.setLayout(controlJPanelLayout);
+        controlJPanelLayout.setHorizontalGroup(
+            controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlJPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BtnAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BtnUser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnViewUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                    .addComponent(btnTrackAbnormal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {BtnAdmin, BtnUser, jButton1});
-
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addComponent(BtnAdmin)
-                .addGap(30, 30, 30)
-                .addComponent(BtnUser)
-                .addGap(31, 31, 31)
-                .addComponent(jButton1)
-                .addContainerGap(250, Short.MAX_VALUE))
+        controlJPanelLayout.setVerticalGroup(
+            controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(controlJPanelLayout.createSequentialGroup()
+                .addGap(86, 86, 86)
+                .addComponent(btnViewUpdate)
+                .addGap(64, 64, 64)
+                .addComponent(btnTrackAbnormal)
+                .addContainerGap(253, Short.MAX_VALUE))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {BtnAdmin, BtnUser, jButton1});
+        jSplitPane.setLeftComponent(controlJPanel);
 
-        jSplitPane1.setLeftComponent(jPanel2);
+        displayJPanel.setMinimumSize(new java.awt.Dimension(950, 449));
+        displayJPanel.setLayout(new java.awt.CardLayout());
+        jSplitPane.setRightComponent(displayJPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 739, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1086, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jSplitPane1)
-                .addContainerGap())
+            .addComponent(jSplitPane)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAdminActionPerformed
+    private void btnViewUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewUpdateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnAdminActionPerformed
+        SystemJPanel sysJPanel = new SystemJPanel(displayJPanel, system);
+        displayJPanel.add("System",sysJPanel);
+        CardLayout cardLayout = (CardLayout) displayJPanel.getLayout();
+        cardLayout.next(displayJPanel);
+    }//GEN-LAST:event_btnViewUpdateActionPerformed
 
-    private void BtnUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnUserActionPerformed
+    private void btnTrackAbnormalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrackAbnormalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnUserActionPerformed
+        AbnormalJPanel trackJPanel = new AbnormalJPanel(displayJPanel, system);
+        //jSplitPane.setRightComponent(trackJPanel);
+        displayJPanel.add("TrackPanel", trackJPanel);
+        CardLayout cardLayout = (CardLayout) displayJPanel.getLayout();
+        cardLayout.next(displayJPanel);
+    }//GEN-LAST:event_btnTrackAbnormalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,6 +145,7 @@ public class MainJFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -162,11 +156,10 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnAdmin;
-    private javax.swing.JButton BtnUser;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JButton btnTrackAbnormal;
+    private javax.swing.JButton btnViewUpdate;
+    private javax.swing.JPanel controlJPanel;
+    private javax.swing.JPanel displayJPanel;
+    private javax.swing.JSplitPane jSplitPane;
     // End of variables declaration//GEN-END:variables
 }

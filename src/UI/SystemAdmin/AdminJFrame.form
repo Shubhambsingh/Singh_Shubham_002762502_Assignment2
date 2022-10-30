@@ -51,18 +51,26 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnLogOut" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnCreatePatient" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnPatientRecords" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btnReadPerson" min="-2" pref="88" max="-2" attributes="0"/>
                                   <Component id="btnCreate" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
-                                  <Component id="btnReadHospital" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="btnCreateDoctor" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="btnReadHospital" alignment="0" pref="88" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="btnDoctorRecords" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="btnReadPerson" min="-2" pref="88" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="btnViewUpdate" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -72,13 +80,19 @@
                       <Component id="btnReadPerson" min="-2" pref="70" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnCreate" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnReadHospital" min="-2" pref="70" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="btnViewUpdate" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="btnCreateDoctor" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnDoctorRecords" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="btnCreatePatient" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnPatientRecords" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="btnLogOut" min="-2" pref="45" max="-2" attributes="0"/>
-                      <EmptySpace pref="324" max="32767" attributes="0"/>
+                      <EmptySpace pref="241" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -116,12 +130,36 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReadHospitalActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnViewUpdate">
+            <Component class="javax.swing.JButton" name="btnDoctorRecords">
               <Properties>
-                <Property name="text" type="java.lang.String" value="View/Manage"/>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;center&gt;&#xa;Doctor &lt;br&gt; Records&#xa;&lt;/center&gt;&#xa;&lt;/html&gt;"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewUpdateActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDoctorRecordsActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnCreateDoctor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;center&gt;&#xa;Create &lt;br&gt; Doctor&#xa;&lt;/center&gt;&#xa;&lt;/html&gt;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreateDoctorActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnCreatePatient">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;center&gt; Create &lt;br&gt; Patient &lt;/center&gt; &lt;/html&gt;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreatePatientActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnPatientRecords">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;center&gt; Patient &lt;br&gt; Records &lt;/center&gt; &lt;/html&gt;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPatientRecordsActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

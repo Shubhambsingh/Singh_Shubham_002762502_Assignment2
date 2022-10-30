@@ -5,15 +5,18 @@
 package UI.SystemAdmin;
 
 import Model.Doctor.DoctorDirectory;
+import Model.Encounter.EncounterDirectory;
 import Model.Hospital.HospitalDirectory;
+import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUp;
 import Model.SignUp.SignUpDirectory;
+import Model.Vitals.VitalsDirectory;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author sohamdeshpande
+ * @author UshaSingh
  */
 public class SignUpJPanel extends javax.swing.JPanel {
 
@@ -24,13 +27,19 @@ public class SignUpJPanel extends javax.swing.JPanel {
     SignUpDirectory SignUpDirectory;
     HospitalDirectory HospitalDirectory;
     DoctorDirectory DoctorDirectory;
+    PatientDirectory PatientDirectory;
+    EncounterDirectory EncounterDirectory;
+    VitalsDirectory VitalsDirectory;
     SignUp SignUp;
     
-    public SignUpJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory) {
+    public SignUpJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
         this.DoctorDirectory = DoctorDirectory;
+        this.PatientDirectory = PatientDirectory;
+        this.EncounterDirectory = EncounterDirectory;
+        this.VitalsDirectory = VitalsDirectory;
     }
 
     /**
@@ -381,7 +390,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_txtDoBSignUpActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        new MainJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory).setVisible(true);
+        new MainJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
 

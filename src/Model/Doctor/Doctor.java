@@ -6,12 +6,12 @@ package Model.Doctor;
 
 /**
  *
- * @author sohamdeshpande
+ * @author UshaSingh
  */
 public class Doctor {
     
-    //private int HospitalID;
-    //private String HospitalName;
+    private int HospitalID;
+    private String HospitalName;
     private int PersonID;
     private int DoctorID;
     private String DoctorName;
@@ -23,21 +23,21 @@ public class Doctor {
     private String CreatePassword;
     private String ConfirmPassword;
 
-//    public int getHospitalID() {
-//        return HospitalID;
-//    }
-//
-//    public void setHospitalID(int HospitalID) {
-//        this.HospitalID = HospitalID;
-//    }
-//
-//    public String getHospitalName() {
-//        return HospitalName;
-//    }
-//
-//    public void setHospitalName(String HospitalName) {
-//        this.HospitalName = HospitalName;
-//    }
+    public int getHospitalID() {
+        return HospitalID;
+    }
+
+    public void setHospitalID(int HospitalID) {
+        this.HospitalID = HospitalID;
+    }
+
+    public String getHospitalName() {
+        return HospitalName;
+    }
+
+    public void setHospitalName(String HospitalName) {
+        this.HospitalName = HospitalName;
+    }
 
     public int getPersonID() {
         return PersonID;
@@ -122,7 +122,7 @@ public class Doctor {
     }
     @Override
     public String toString(){
-        return DoctorName;
+        return HospitalName;
     }
     
 }

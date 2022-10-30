@@ -19,10 +19,12 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="btnPerson" pref="130" max="32767" attributes="0"/>
+                  <Component id="btnPerson" max="32767" attributes="0"/>
                   <Component id="btnHospitalAdmin" max="32767" attributes="0"/>
+                  <Component id="btnDoctor" max="32767" attributes="0"/>
+                  <Component id="btnPatient" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="427" max="32767" attributes="0"/>
+              <EmptySpace pref="438" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -33,7 +35,11 @@
               <Component id="btnPerson" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnHospitalAdmin" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="692" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="btnDoctor" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="btnPatient" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="622" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -53,6 +59,22 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHospitalAdminActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnDoctor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Doctor"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDoctorActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnPatient">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Patient"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPatientActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

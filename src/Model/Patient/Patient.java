@@ -2,16 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Model.SignUp;
+package Model.Patient;
 
 /**
  *
  * @author UshaSingh
  */
-public class SignUp {
+public class Patient {
+    
+    private int HospitalID;
+    private String HospitalName;
     private int PersonID;
-    private String Name;
-    private String DoB;
+    private int PatientID;
+    private String PatientName;
     private int Age;
     private String Address;
     private String City;
@@ -19,21 +22,45 @@ public class SignUp {
     private int PinCode;
     private String CreatePassword;
     private String ConfirmPassword;
-    
-    public String getName() {
-        return Name;
+
+    public int getHospitalID() {
+        return HospitalID;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setHospitalID(int HospitalID) {
+        this.HospitalID = HospitalID;
     }
 
-    public String getDoB() {
-        return DoB;
+    public String getHospitalName() {
+        return HospitalName;
     }
 
-    public void setDoB(String DoB) {
-        this.DoB = DoB;
+    public void setHospitalName(String HospitalName) {
+        this.HospitalName = HospitalName;
+    }
+
+    public int getPersonID() {
+        return PersonID;
+    }
+
+    public void setPersonID(int PersonID) {
+        this.PersonID = PersonID;
+    }
+
+    public int getPatientID() {
+        return PatientID;
+    }
+
+    public void setPatientID(int PatientID) {
+        this.PatientID = PatientID;
+    }
+
+    public String getPatientName() {
+        return PatientName;
+    }
+
+    public void setPatientName(String DoctorName) {
+        this.PatientName = DoctorName;
     }
 
     public int getAge() {
@@ -51,7 +78,9 @@ public class SignUp {
     public void setAddress(String Address) {
         this.Address = Address;
     }
-
+    
+    
+    
     public String getCity() {
         return City;
     }
@@ -67,8 +96,6 @@ public class SignUp {
     public void setState(String State) {
         this.State = State;
     }
-    
-    
 
     public int getPinCode() {
         return PinCode;
@@ -93,19 +120,9 @@ public class SignUp {
     public void setConfirmPassword(String ConfirmPassword) {
         this.ConfirmPassword = ConfirmPassword;
     }
-
-    public int getPersonID() {
-        return PersonID;
-    }
-
-    public void setPersonID(int PersonID) {
-        this.PersonID = PersonID;  
-    }
- 
     @Override
     public String toString(){
-        return Name;
+        return HospitalName;
     }
-    
     
 }

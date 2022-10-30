@@ -4,48 +4,51 @@
  */
 package UI.SystemAdmin;
 
-import Hospital.UI.HospitalCreateAdminJFrame;
-import Hospital.UI.HospitalReadAdminJFrame;
+import UI.Doctor.CreateHADoctorJPanel;
+import UI.Doctor.CreateSADoctorJPanel;
+import UI.Doctor.ReadHADoctorJPanel;
+import UI.Doctor.ReadSADoctorJPanel;
+import UI.Hospital.HospitalCreateAdminJFrame;
+import UI.Hospital.HospitalReadAdminJFrame;
 import Model.Doctor.DoctorDirectory;
+import Model.Encounter.EncounterDirectory;
 import Model.Hospital.HospitalDirectory;
+import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
-import java.awt.CardLayout;
-import java.util.ArrayList;
-import model.City;
-import model.SampleData;
-import ui.SystemJPanel;
+import Model.Vitals.VitalsDirectory;
+import UI.Patient.CreateSAPatientJPanel;
+import UI.Patient.ReadSAPatientJPanel;
 
 /**
  *
- * @author sohamdeshpande
+ * @author UshaSingh
  */
 public class AdminJFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form AdminJFrame
      */
-    private model.System system;
+    
     SignUpDirectory SignUpDirectory;
     HospitalDirectory HospitalDirectory;
     DoctorDirectory DoctorDirectory;
-    ArrayList<City> cities;
- 
+    PatientDirectory PatientDirectory;
+    EncounterDirectory EncounterDirectory;
+    VitalsDirectory VitalsDirectory;
     
     
-    
-    public AdminJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, ArrayList<City> cities) {
+    public AdminJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
     initComponents();
         
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
         this.DoctorDirectory = DoctorDirectory;
-        //this.patientDirectory = patientDirectory;
-        //this.personDirectory = personDirectory;
-        this.cities = cities;
-        
+        this.PatientDirectory = PatientDirectory;
+        this.EncounterDirectory = EncounterDirectory;
+        this.VitalsDirectory = VitalsDirectory;
         //SignUpDirectory = new SignUpDirectory();
     }
- 
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -61,7 +64,10 @@ public class AdminJFrame extends javax.swing.JFrame {
         btnCreate = new javax.swing.JButton();
         btnReadPerson = new javax.swing.JButton();
         btnReadHospital = new javax.swing.JButton();
-        btnViewUpdate = new javax.swing.JButton();
+        btnDoctorRecords = new javax.swing.JButton();
+        btnCreateDoctor = new javax.swing.JButton();
+        btnCreatePatient = new javax.swing.JButton();
+        btnPatientRecords = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,10 +100,31 @@ public class AdminJFrame extends javax.swing.JFrame {
             }
         });
 
-        btnViewUpdate.setText("View/Manage");
-        btnViewUpdate.addActionListener(new java.awt.event.ActionListener() {
+        btnDoctorRecords.setText("<html>\n<center>\nDoctor <br> Records\n</center>\n</html>");
+        btnDoctorRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewUpdateActionPerformed(evt);
+                btnDoctorRecordsActionPerformed(evt);
+            }
+        });
+
+        btnCreateDoctor.setText("<html>\n<center>\nCreate <br> Doctor\n</center>\n</html>");
+        btnCreateDoctor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateDoctorActionPerformed(evt);
+            }
+        });
+
+        btnCreatePatient.setText("<html> <center> Create <br> Patient </center> </html>");
+        btnCreatePatient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreatePatientActionPerformed(evt);
+            }
+        });
+
+        btnPatientRecords.setText("<html> <center> Patient <br> Records </center> </html>");
+        btnPatientRecords.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPatientRecordsActionPerformed(evt);
             }
         });
 
@@ -109,14 +136,20 @@ public class AdminJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnLogOut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCreatePatient)
+                    .addComponent(btnPatientRecords)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnReadPerson, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnReadHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(btnCreateDoctor, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(btnReadHospital, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE))
+                            .addComponent(btnDoctorRecords, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnReadPerson, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .addComponent(btnViewUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,13 +158,19 @@ public class AdminJFrame extends javax.swing.JFrame {
                 .addComponent(btnReadPerson, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnReadHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(btnViewUpdate)
-                .addGap(111, 111, 111)
+                .addGap(30, 30, 30)
+                .addComponent(btnCreateDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnDoctorRecords, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(btnCreatePatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPatientRecords, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
                 .addComponent(btnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(324, Short.MAX_VALUE))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
 
         adminSplitPane.setLeftComponent(jPanel1);
@@ -164,36 +203,52 @@ public class AdminJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        new MainJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory).setVisible(true);
+        new MainJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnLogOutActionPerformed
-
-    private void btnReadPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadPersonActionPerformed
-        // TODO add your handling code here:
-
-        ReadAdminJPanel rPanel = new ReadAdminJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory);
-        adminSplitPane.setRightComponent(rPanel);
-    }//GEN-LAST:event_btnReadPersonActionPerformed
-
-    private void btnViewUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewUpdateActionPerformed
-        // TODO add your handling code here:
-        SystemJPanel sysJPanel = new SystemJPanel(displayJPanel, system);
-        displayJPanel.add("System",sysJPanel);
-        CardLayout cardLayout = (CardLayout) displayJPanel.getLayout();
-        cardLayout.next(displayJPanel);
-    }//GEN-LAST:event_btnViewUpdateActionPerformed
-
-    private void btnReadHospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadHospitalActionPerformed
-        // TODO add your handling code here:
-        new HospitalReadAdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory).setVisible(true);
-    }//GEN-LAST:event_btnReadHospitalActionPerformed
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         // TODO add your handling code here:
 
-        new HospitalCreateAdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory).setVisible(true);
-
+        new HospitalCreateAdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
+        
     }//GEN-LAST:event_btnCreateActionPerformed
+
+    private void btnReadPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadPersonActionPerformed
+        // TODO add your handling code here:
+
+        ReadAdminJPanel rPanel = new ReadAdminJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory);
+        adminSplitPane.setRightComponent(rPanel);
+    }//GEN-LAST:event_btnReadPersonActionPerformed
+
+    private void btnReadHospitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadHospitalActionPerformed
+        // TODO add your handling code here:
+        new HospitalReadAdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
+    }//GEN-LAST:event_btnReadHospitalActionPerformed
+
+    private void btnDoctorRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoctorRecordsActionPerformed
+        // TODO add your handling code here:
+        ReadSADoctorJPanel loginuserpanel = new ReadSADoctorJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory);
+        adminSplitPane.setRightComponent(loginuserpanel);
+    }//GEN-LAST:event_btnDoctorRecordsActionPerformed
+
+    private void btnCreateDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateDoctorActionPerformed
+        // TODO add your handling code here:
+        CreateSADoctorJPanel loginuserpanel = new CreateSADoctorJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory);
+        adminSplitPane.setRightComponent(loginuserpanel);
+    }//GEN-LAST:event_btnCreateDoctorActionPerformed
+
+    private void btnCreatePatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePatientActionPerformed
+        // TODO add your handling code here:
+        CreateSAPatientJPanel loginuserpanel = new CreateSAPatientJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory);
+        adminSplitPane.setRightComponent(loginuserpanel);
+    }//GEN-LAST:event_btnCreatePatientActionPerformed
+
+    private void btnPatientRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientRecordsActionPerformed
+        // TODO add your handling code here:
+        ReadSAPatientJPanel loginuserpanel = new ReadSAPatientJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory);
+        adminSplitPane.setRightComponent(loginuserpanel);
+    }//GEN-LAST:event_btnPatientRecordsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -229,17 +284,17 @@ public class AdminJFrame extends javax.swing.JFrame {
 //            }
 //        });
 //    }
-    private javax.swing.JButton btnTrackAbnormal;
-    private javax.swing.JPanel controlJPanel;
-    private javax.swing.JPanel displayJPanel;
-    private javax.swing.JSplitPane jSplitPane;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSplitPane adminSplitPane;
     private javax.swing.JButton btnCreate;
+    private javax.swing.JButton btnCreateDoctor;
+    private javax.swing.JButton btnCreatePatient;
+    private javax.swing.JButton btnDoctorRecords;
     private javax.swing.JButton btnLogOut;
+    private javax.swing.JButton btnPatientRecords;
     private javax.swing.JButton btnReadHospital;
     private javax.swing.JButton btnReadPerson;
-    private javax.swing.JButton btnViewUpdate;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

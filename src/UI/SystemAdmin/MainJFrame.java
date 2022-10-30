@@ -5,13 +5,16 @@
 package UI.SystemAdmin;
 
 import Model.Doctor.DoctorDirectory;
+import Model.Encounter.EncounterDirectory;
 import Model.Hospital.HospitalDirectory;
+import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUp;
 import Model.SignUp.SignUpDirectory;
+import Model.Vitals.VitalsDirectory;
 import javax.swing.JOptionPane;
 /**
  *
- * @author sohamdeshpande
+ * @author UshaSingh
  */
 
 public class MainJFrame extends javax.swing.JFrame {
@@ -23,6 +26,9 @@ public class MainJFrame extends javax.swing.JFrame {
     SignUpDirectory SignUpDirectory;
     HospitalDirectory HospitalDirectory;
     DoctorDirectory DoctorDirectory;
+    PatientDirectory PatientDirectory;
+    EncounterDirectory EncounterDirectory;
+    VitalsDirectory VitalsDirectory;
     
     //final int PersonID = 1;
     public MainJFrame() {
@@ -30,15 +36,21 @@ public class MainJFrame extends javax.swing.JFrame {
         SignUpDirectory = new SignUpDirectory();
         HospitalDirectory = new HospitalDirectory();
         DoctorDirectory = new DoctorDirectory();
+        PatientDirectory = new PatientDirectory();
+        EncounterDirectory = new EncounterDirectory();
+        VitalsDirectory = new VitalsDirectory();
 
  
     }
     
-    public MainJFrame(SignUpDirectory SignUpDirectory1, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory) {
+    public MainJFrame(SignUpDirectory SignUpDirectory1, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory1;
         this.HospitalDirectory = HospitalDirectory;
         this.DoctorDirectory = DoctorDirectory;
+        this.PatientDirectory = PatientDirectory;
+        this.EncounterDirectory = EncounterDirectory;
+        this.VitalsDirectory = VitalsDirectory;
         
     }
 
@@ -151,20 +163,20 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminActionPerformed
         
-        LoginAdminJPanel loginadminpanel = new LoginAdminJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory);
+        LoginAdminJPanel loginadminpanel = new LoginAdminJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory);
         splitPaneMain.setRightComponent(loginadminpanel);
     }//GEN-LAST:event_btnAdminActionPerformed
 
     private void btnCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCustomerActionPerformed
         
-        LoginUserJPanel loginuserpanel = new LoginUserJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory);
+        LoginUserJPanel loginuserpanel = new LoginUserJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory);
         splitPaneMain.setRightComponent(loginuserpanel);
     }//GEN-LAST:event_btnCustomerActionPerformed
 
     private void btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpActionPerformed
         //new SignUpJFrame().show();
         //dispose();
-        SignUpJPanel signuppanel = new SignUpJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory);
+        SignUpJPanel signuppanel = new SignUpJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory);
         splitPaneMain.setRightComponent(signuppanel);
     }//GEN-LAST:event_btnSignUpActionPerformed
 

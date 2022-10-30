@@ -5,19 +5,20 @@
 package UI.SystemAdmin;
 
 import Model.Doctor.DoctorDirectory;
+import Model.Encounter.EncounterDirectory;
 import Model.Hospital.HospitalDirectory;
+import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
+import Model.Vitals.VitalsDirectory;
 import java.awt.Component;
 import javax.swing.*;
 
 
 /**
  *
- * @author sohamdeshpande
+ * @author UshaSingh
  */
 import java.awt.Window;
-import java.util.ArrayList;
-import model.City;
 public class LoginAdminJPanel extends javax.swing.JPanel {
 
     /**
@@ -27,14 +28,18 @@ public class LoginAdminJPanel extends javax.swing.JPanel {
     SignUpDirectory SignUpDirectory;
     HospitalDirectory HospitalDirectory;
     DoctorDirectory DoctorDirectory;
-    ArrayList<City> cities;
+    PatientDirectory PatientDirectory;
+    EncounterDirectory EncounterDirectory;
+    VitalsDirectory VitalsDirectory;
     
-    public LoginAdminJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory) {
+    public LoginAdminJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
         this.DoctorDirectory = DoctorDirectory;
-        //this.cities = cities;
+        this.PatientDirectory = PatientDirectory;
+        this.EncounterDirectory = EncounterDirectory;
+        this.VitalsDirectory = VitalsDirectory;
     }
 
     /**
@@ -128,7 +133,7 @@ public class LoginAdminJPanel extends javax.swing.JPanel {
 
         if(Username.equals("Admin") && Password.equals("Admin")){
 
-            new AdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, cities).show();
+            new AdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).show();
             //To dispose a Frame from Panel
             Component comp = SwingUtilities.getRoot(this);
             ((Window) comp).dispose();

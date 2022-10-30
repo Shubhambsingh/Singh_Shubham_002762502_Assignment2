@@ -4,11 +4,12 @@
  */
 package Model.Doctor;
 
+import Model.Doctor.Doctor;
 import java.util.ArrayList;
 
 /**
  *
- * @author sohamdeshpande
+ * @author UshaSingh
  */
 public class DoctorDirectory {
     private ArrayList<Doctor> DoctorDirectory;
@@ -36,7 +37,6 @@ public class DoctorDirectory {
         }
         Doctor newDoctor = new Doctor();
         newDoctor.setDoctorID(id);
-        System.out.println(newDoctor);
         DoctorDirectory.add(newDoctor);
         return newDoctor;
     }

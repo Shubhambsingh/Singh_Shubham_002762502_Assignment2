@@ -4,8 +4,10 @@
  */
 package UI.SystemAdmin;
 
+import Model.Doctor.Doctor;
 import Model.Doctor.DoctorDirectory;
 import Model.Hospital.HospitalDirectory;
+import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUp;
 import Model.SignUp.SignUpDirectory;
 import java.util.regex.Pattern;
@@ -16,7 +18,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author sohamdeshpande
+ * @author UshaSingh
  */
 public class ReadAdminJPanel extends javax.swing.JPanel {
 
@@ -27,14 +29,16 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
     SignUpDirectory SignUpDirectory;
     HospitalDirectory HospitalDirectory;
     DoctorDirectory DoctorDirectory;
+    PatientDirectory PatientDirectory;
     
     
-    public ReadAdminJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory) {
+    public ReadAdminJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory) {
         initComponents();
         
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
         this.DoctorDirectory = DoctorDirectory;
+        this.PatientDirectory = PatientDirectory;
    
         populateTable();
     }
@@ -468,11 +472,20 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         txtCreatePasswordSignUp.setText("");
         txtConfirmPasswordSignUp.setText("");
         
+        for (Doctor d : DoctorDirectory.getDoctorDirectory()){
+                if (String.valueOf(d.getDoctorName()).equals(txtNameSignUp.getText())){
+                    d.setDoctorName(Name);
+                    d.setAge(Age);
+                    d.setAddress(Address);
+                    d.setCity(City);
+                    d.setState(State);
+                    d.setPinCode(PinCode);
+                }
         populateTable();
     }//GEN-LAST:event_btnUpdateSignUpActionPerformed
     }
     }
-    
+    }
     
     private void btnUpdateSignUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnUpdateSignUpKeyPressed
         // TODO add your handling code here:
@@ -513,15 +526,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
     private void btnPersonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersonDeleteActionPerformed
         // TODO add your handling code here:
         
-        txtNameSignUp.setText("");
-        txtDoBSignUp.setText("");
-        txtAgeSignUp.setText("");
-        txtAddressSignUp.setText("");
-        txtCitySignUp.setText("");
-        txtStateSignUp.setText("");
-        txtPinCodeSignUp.setText("");
-        txtCreatePasswordSignUp.setText("");
-        txtConfirmPasswordSignUp.setText("");
+        
         
         int selectedRowIndex = tblPersonDirectory.getSelectedRow();
         
@@ -531,15 +536,19 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         }
         
         DefaultTableModel model = (DefaultTableModel) tblPersonDirectory.getModel();
-        SignUp selectedSignUp = (SignUp) model.getValueAt(selectedRowIndex,1);
-        
+        SignUp selectedSignUp = (SignUp) model.getValueAt(selectedRowIndex,1);     
         SignUpDirectory.deleteEmployee(selectedSignUp);
+        
+        for (Doctor d : DoctorDirectory.getDoctorDirectory()){
+                if (String.valueOf(d.getDoctorName()).equals(txtNameSignUp.getText())){
+                   DoctorDirectory.deleteEmployee(d);
+                }
         
         JOptionPane.showMessageDialog(this, "Person Details deleted.");
         
         populateTable();                      
     }//GEN-LAST:event_btnPersonDeleteActionPerformed
-
+    }
     private void txtCreatePasswordSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCreatePasswordSignUpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCreatePasswordSignUpActionPerformed
@@ -658,5 +667,8 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
             model.addRow(row);
             
         }
+    }
+
+    private void populateTable2() {    
     }
 }

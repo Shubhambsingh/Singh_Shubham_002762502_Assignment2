@@ -79,14 +79,23 @@ public class MainJFrame extends javax.swing.JFrame {
 
         splitPaneMain.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        btnAdmin.setText("System Admin");
+        controlPanelMain.setBackground(new java.awt.Color(153, 153, 153));
+        controlPanelMain.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnAdmin.setBackground(new java.awt.Color(0, 153, 153));
+        btnAdmin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnAdmin.setText("System Administrator");
+        btnAdmin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdminActionPerformed(evt);
             }
         });
 
+        btnCustomer.setBackground(new java.awt.Color(0, 153, 153));
+        btnCustomer.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCustomer.setText("Users");
+        btnCustomer.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCustomerActionPerformed(evt);
@@ -96,7 +105,10 @@ public class MainJFrame extends javax.swing.JFrame {
         lblHospitalManagementSystem.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
         lblHospitalManagementSystem.setText("Hospital Management System");
 
-        btnSignUp.setText("Sign Up");
+        btnSignUp.setBackground(new java.awt.Color(0, 153, 153));
+        btnSignUp.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSignUp.setText("New User?");
+        btnSignUp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSignUpActionPerformed(evt);
@@ -119,7 +131,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     .addGroup(controlPanelMainLayout.createSequentialGroup()
                         .addGap(150, 150, 150)
                         .addComponent(lblHospitalManagementSystem)))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         controlPanelMainLayout.setVerticalGroup(
             controlPanelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,15 +148,18 @@ public class MainJFrame extends javax.swing.JFrame {
 
         splitPaneMain.setTopComponent(controlPanelMain);
 
+        workAreaMain.setBackground(new java.awt.Color(204, 255, 255));
+        workAreaMain.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         javax.swing.GroupLayout workAreaMainLayout = new javax.swing.GroupLayout(workAreaMain);
         workAreaMain.setLayout(workAreaMainLayout);
         workAreaMainLayout.setHorizontalGroup(
             workAreaMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 598, Short.MAX_VALUE)
         );
         workAreaMainLayout.setVerticalGroup(
             workAreaMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 689, Short.MAX_VALUE)
+            .addGap(0, 687, Short.MAX_VALUE)
         );
 
         splitPaneMain.setRightComponent(workAreaMain);

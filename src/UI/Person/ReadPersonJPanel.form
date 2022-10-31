@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="ff" red="cc" type="rgb"/>
+    </Property>
+    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+        <LineBorder/>
+      </Border>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -27,40 +37,39 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="514" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="btnPersonView" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnPersonView" min="-2" pref="69" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnPersonDelete" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnPersonDelete" min="-2" pref="73" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                      <Component id="btnUpdateSignUp" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblCreatePassword" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblConfirmPassword" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblAge" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblCity" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblAddress" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblName" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblState" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblPinCode" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblDoB" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txtAgeSignUp" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtAddressSignUp" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtCitySignUp" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtStateSignUp" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtDoBSignUp" alignment="0" pref="250" max="32767" attributes="0"/>
-                              <Component id="txtPinCodeSignUp" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtNameSignUp" max="32767" attributes="0"/>
-                              <Component id="txtCreatePasswordSignUp" alignment="0" pref="250" max="32767" attributes="0"/>
-                              <Component id="txtConfirmPasswordSignUp" alignment="0" pref="250" max="32767" attributes="0"/>
-                          </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblCreatePassword" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblConfirmPassword" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAge" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCity" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAddress" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblName" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblState" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPinCode" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblDoB" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txtAgeSignUp" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtAddressSignUp" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtCitySignUp" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtStateSignUp" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtDoBSignUp" alignment="0" pref="250" max="32767" attributes="0"/>
+                          <Component id="txtPinCodeSignUp" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtNameSignUp" max="32767" attributes="0"/>
+                          <Component id="txtCreatePasswordSignUp" alignment="0" pref="250" max="32767" attributes="0"/>
+                          <Component id="txtConfirmPasswordSignUp" alignment="0" pref="250" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="btnUpdateSignUp" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="48" max="32767" attributes="0"/>
+              <EmptySpace pref="46" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -77,58 +86,64 @@
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="250" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnPersonView" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnPersonDelete" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="btnPersonDelete" pref="26" max="32767" attributes="0"/>
+                  <Component id="btnPersonView" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblName" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtNameSignUp" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblDoB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblDoB" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtDoBSignUp" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAge" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtAgeSignUp" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblAddress" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAddress" linkSize="2" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="txtAddressSignUp" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblCity" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtCitySignUp" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblState" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblState" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtStateSignUp" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblPinCode" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtPinCodeSignUp" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblCreatePassword" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCreatePasswordSignUp" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="btnUpdateSignUp" min="-2" pref="38" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblPinCode" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtPinCodeSignUp" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblCreatePassword" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtCreatePasswordSignUp" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblConfirmPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblConfirmPassword" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtConfirmPasswordSignUp" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btnUpdateSignUp" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="54" max="32767" attributes="0"/>
+              <EmptySpace pref="90" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -214,7 +229,18 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnPersonView">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="99" red="0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="View"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPersonViewActionPerformed"/>
@@ -222,7 +248,18 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnPersonDelete">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="99" red="0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Delete"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPersonDeleteActionPerformed"/>
@@ -236,12 +273,28 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblDoB">
       <Properties>
-        <Property name="text" type="java.lang.String" value="DoB:"/>
+        <Property name="text" type="java.lang.String" value="Date of Birth:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnUpdateSignUp">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="99" red="0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Update"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateSignUpActionPerformed"/>
@@ -251,6 +304,11 @@
     <Component class="javax.swing.JLabel" name="lblAge">
       <Properties>
         <Property name="text" type="java.lang.String" value="Age:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtDoBSignUp">
@@ -262,11 +320,21 @@
     <Component class="javax.swing.JLabel" name="lblAddress">
       <Properties>
         <Property name="text" type="java.lang.String" value="Address:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblCity">
       <Properties>
         <Property name="text" type="java.lang.String" value="City:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtAgeSignUp">
@@ -277,6 +345,11 @@
     <Component class="javax.swing.JLabel" name="lblState">
       <Properties>
         <Property name="text" type="java.lang.String" value="State:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtAddressSignUp">
@@ -287,6 +360,11 @@
     <Component class="javax.swing.JLabel" name="lblPinCode">
       <Properties>
         <Property name="text" type="java.lang.String" value="Pin Code:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCitySignUp">
@@ -308,16 +386,31 @@
     <Component class="javax.swing.JLabel" name="lblCreatePassword">
       <Properties>
         <Property name="text" type="java.lang.String" value="Update Password:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblConfirmPassword">
       <Properties>
         <Property name="text" type="java.lang.String" value="Confirm Password:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblName">
       <Properties>
         <Property name="text" type="java.lang.String" value="Name:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
@@ -325,7 +418,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Futura" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Person Records"/>
+        <Property name="text" type="java.lang.String" value="Person Details"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCreatePasswordSignUp">
@@ -349,6 +442,11 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Search Person:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>

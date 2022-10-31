@@ -77,6 +77,9 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
         txtEncounterID = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         txtSearchPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSearchPersonActionPerformed(evt);
@@ -89,6 +92,7 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
         });
 
         jLabel3.setText("Search:");
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel2.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
         jLabel2.setText("Encounter History");
@@ -115,6 +119,7 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblEncounterDirectory);
 
         jLabel1.setText("Patient ID:");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtPatientID.setEditable(false);
         txtPatientID.addActionListener(new java.awt.event.ActionListener() {
@@ -124,6 +129,7 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
         });
 
         jLabel5.setText("Patient's Name:");
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtPatientName.setEditable(false);
 
@@ -142,6 +148,7 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
         });
 
         lblAddress1.setText("Date:");
+        lblAddress1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtTimeStamp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -150,8 +157,10 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
         });
 
         lblAddress2.setText("Time Stamp:");
+        lblAddress2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblName.setText("Doctor's Name:");
+        lblName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtDoctorName.setEditable(false);
         txtDoctorName.addActionListener(new java.awt.event.ActionListener() {
@@ -166,15 +175,22 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
         });
 
         jLabel4.setText("Hospital Name:");
+        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        btnView.setBackground(new java.awt.Color(0, 204, 204));
+        btnView.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnView.setText("View");
+        btnView.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewActionPerformed(evt);
             }
         });
 
+        btnUpdate.setBackground(new java.awt.Color(0, 204, 204));
+        btnUpdate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnUpdate.setText("Update");
+        btnUpdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
@@ -190,6 +206,7 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
         });
 
         jLabel6.setText("Encounter ID:");
+        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -218,7 +235,6 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
                                             .addComponent(jLabel5)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                             .addComponent(txtPatientName)))))
-                            .addComponent(btnView)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,7 +248,6 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
                                     .addComponent(lblName)
                                     .addGap(18, 18, 18)
                                     .addComponent(txtDoctorName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(btnUpdate)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel4)
@@ -240,8 +255,10 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
                                     .addGap(20, 20, 20)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtEncounterID)
-                                        .addComponent(txtHospitalName)))))))
-                .addContainerGap(27, Short.MAX_VALUE))
+                                        .addComponent(txtHospitalName)))
+                                .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,9 +277,9 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
                     .addComponent(txtSearchPerson, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnView)
-                .addGap(14, 14, 14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEncounterID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
@@ -283,8 +300,8 @@ public class EncounterRecordsJPanel extends javax.swing.JPanel {
                     .addComponent(txtTimeStamp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblAddress2))
                 .addGap(18, 18, 18)
-                .addComponent(btnUpdate)
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(166, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

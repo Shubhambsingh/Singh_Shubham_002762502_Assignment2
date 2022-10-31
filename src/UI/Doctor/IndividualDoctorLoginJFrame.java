@@ -62,21 +62,33 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnCreateVitals.setBackground(new java.awt.Color(0, 204, 204));
+        btnCreateVitals.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCreateVitals.setText("Create Vitals");
+        btnCreateVitals.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnCreateVitals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateVitalsActionPerformed(evt);
             }
         });
 
+        btnViewVitalsHistory.setBackground(new java.awt.Color(0, 204, 204));
+        btnViewVitalsHistory.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnViewVitalsHistory.setText("<html>\n<center>\nView <br> Vitals <br> History\n</center>\n</html>");
+        btnViewVitalsHistory.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnViewVitalsHistory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewVitalsHistoryActionPerformed(evt);
             }
         });
 
+        btnLogOut.setBackground(new java.awt.Color(0, 204, 204));
+        btnLogOut.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnLogOut.setText("Log Out");
+        btnLogOut.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogOutActionPerformed(evt);
@@ -89,42 +101,45 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnCreateVitals, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnViewVitalsHistory))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreateVitals)
+                    .addComponent(btnViewVitalsHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(13, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(8, 8, 8)
                     .addComponent(btnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(8, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(btnCreateVitals)
-                .addGap(18, 18, 18)
+                .addGap(83, 83, 83)
                 .addComponent(btnViewVitalsHistory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(652, Short.MAX_VALUE))
+                .addContainerGap(593, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(388, 388, 388)
                     .addComponent(btnLogOut)
-                    .addContainerGap(389, Short.MAX_VALUE)))
+                    .addContainerGap(390, Short.MAX_VALUE)))
         );
 
         splitDoctorIndividualPane.setLeftComponent(jPanel1);
+
+        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 489, Short.MAX_VALUE)
+            .addGap(0, 487, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 798, Short.MAX_VALUE)
         );
 
         splitDoctorIndividualPane.setRightComponent(jPanel2);

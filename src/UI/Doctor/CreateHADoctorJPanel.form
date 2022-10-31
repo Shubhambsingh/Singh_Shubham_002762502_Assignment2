@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="ff" red="cc" type="rgb"/>
+    </Property>
+  </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -17,82 +22,83 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace pref="102" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="lblName" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="0" pref="97" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="btnSubmit" min="-2" pref="102" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="txtHospitalName" min="-2" pref="250" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="txtHospitalID" min="-2" pref="250" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblCreatePassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblConfirmPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAge" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCity" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblAddress" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblState" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPinCode" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblName1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblName" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                      <Component id="btnSubmit" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="lblCreatePassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblConfirmPassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblAge" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblCity" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblAddress" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblState" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblPinCode" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="txtNameSignUp" min="-2" pref="250" max="-2" attributes="0"/>
-                                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="txtAgeSignUp" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="txtAddressSignUp" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="txtCitySignUp" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="txtStateSignUp" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="txtPinCodeSignUp" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="txtCreatePasswordDoctor" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="txtConfirmPasswordDoctor" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblName1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="txtPersonID" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="btnFetch" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="txtPersonID" min="-2" pref="250" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="btnFetch" min="-2" pref="54" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="27" max="32767" attributes="0"/>
-                                      <Component id="txtHospitalName" min="-2" pref="250" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="txtHospitalID" min="-2" pref="250" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtNameSignUp" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txtAgeSignUp" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtAddressSignUp" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtCitySignUp" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtStateSignUp" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtPinCodeSignUp" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtCreatePasswordDoctor" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtConfirmPasswordDoctor" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="118" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="46" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtHospitalID" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -149,8 +155,8 @@
                   <Component id="txtConfirmPasswordDoctor" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btnSubmit" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="262" max="32767" attributes="0"/>
+              <Component id="btnSubmit" min="-2" pref="35" max="-2" attributes="0"/>
+              <EmptySpace pref="251" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -158,7 +164,18 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnSubmit">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Submit"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitActionPerformed"/>
@@ -169,12 +186,17 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Futura" size="18" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Create Records for a new Doctor"/>
+        <Property name="text" type="java.lang.String" value="Create Records of a new Doctor"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblName1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Person ID:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtPersonID">
@@ -186,41 +208,81 @@
     <Component class="javax.swing.JLabel" name="lblName">
       <Properties>
         <Property name="text" type="java.lang.String" value="Doctor&apos;s Name:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblAge">
       <Properties>
         <Property name="text" type="java.lang.String" value="Age:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblAddress">
       <Properties>
         <Property name="text" type="java.lang.String" value="Address:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblCity">
       <Properties>
         <Property name="text" type="java.lang.String" value="City:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblState">
       <Properties>
         <Property name="text" type="java.lang.String" value="State:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblPinCode">
       <Properties>
         <Property name="text" type="java.lang.String" value="Pin Code:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblCreatePassword">
       <Properties>
         <Property name="text" type="java.lang.String" value="Create Password:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblConfirmPassword">
       <Properties>
         <Property name="text" type="java.lang.String" value="Confirm Password:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtConfirmPasswordDoctor">
@@ -287,7 +349,18 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnFetch">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Fetch"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="12" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Go"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFetchActionPerformed"/>
@@ -296,6 +369,11 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hospital ID:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtHospitalID">
@@ -312,6 +390,11 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hospital Name:"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtHospitalName">

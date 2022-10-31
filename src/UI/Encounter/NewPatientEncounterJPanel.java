@@ -93,6 +93,9 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jList1);
 
+        setBackground(new java.awt.Color(204, 255, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         tblDoctorDirectory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null},
@@ -118,6 +121,7 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
         jLabel2.setText("Raise an Encounter");
 
         jLabel3.setText("Search:");
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtSearchPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,6 +135,7 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
         });
 
         lblName.setText("Doctor's Name:");
+        lblName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtDoctorName.setEditable(false);
         txtDoctorName.addActionListener(new java.awt.event.ActionListener() {
@@ -145,6 +150,7 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
         });
 
         jLabel4.setText("Hospital Name:");
+        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtHospitalName.setEditable(false);
         txtHospitalName.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
@@ -161,6 +167,7 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
         });
 
         lblAddress1.setText("Date:");
+        lblAddress1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtTimeStamp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -169,8 +176,12 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
         });
 
         lblAddress2.setText("Time Stamp:");
+        lblAddress2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        btnSubmit.setBackground(new java.awt.Color(0, 204, 204));
+        btnSubmit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSubmit.setText("Raise Encounter");
+        btnSubmit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -178,6 +189,7 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
         });
 
         jLabel1.setText("Patient ID:");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtPatientID.setEditable(false);
         txtPatientID.addActionListener(new java.awt.event.ActionListener() {
@@ -187,10 +199,14 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
         });
 
         jLabel5.setText("Patient's Name:");
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtPatientName.setEditable(false);
 
-        btnFetch.setText("Fetch");
+        btnFetch.setBackground(new java.awt.Color(0, 204, 204));
+        btnFetch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnFetch.setText("Go");
+        btnFetch.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnFetch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFetchActionPerformed(evt);
@@ -210,6 +226,7 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
         });
 
         lblName1.setText("DoctorID:");
+        lblName1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -236,8 +253,8 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
                                             .addComponent(txtPatientName))
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(txtSearchPerson)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(btnFetch)))))
+                                            .addGap(18, 18, 18)
+                                            .addComponent(btnFetch, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addGap(20, 20, 20)
@@ -265,7 +282,7 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel2)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -306,8 +323,8 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
                     .addComponent(txtTimeStamp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblAddress2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnSubmit)
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(191, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -365,7 +382,7 @@ public class NewPatientEncounterJPanel extends javax.swing.JPanel {
         e.setDate(Date);
         e.setTimeStamp(TimeStamp);
         
-        JOptionPane.showMessageDialog(this, "New Doctor Details Created and the Doctor ID is ");
+        JOptionPane.showMessageDialog(this, "New Encounter Details Created and the Encounter ID is " + e.getPatientID());
 
         txtHospitalName.setText("");
         txtDoctorID.setText("");

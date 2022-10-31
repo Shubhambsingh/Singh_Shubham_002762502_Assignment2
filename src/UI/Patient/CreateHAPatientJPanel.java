@@ -78,20 +78,29 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
         lblName = new javax.swing.JLabel();
         lblAge = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         jLabel1.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
         jLabel1.setText("Create Patient Records");
 
         lblAddress.setText("Address:");
+        lblAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblCity.setText("City:");
+        lblCity.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblState.setText("State:");
+        lblState.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblPinCode.setText("Pin Code:");
+        lblPinCode.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblCreatePassword.setText("Create Password:");
+        lblCreatePassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblConfirmPassword.setText("Confirm Password:");
+        lblConfirmPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtConfirmPasswordDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,7 +176,10 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnFetch.setText("Fetch");
+        btnFetch.setBackground(new java.awt.Color(0, 153, 153));
+        btnFetch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnFetch.setText("Go");
+        btnFetch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnFetch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFetchActionPerformed(evt);
@@ -175,8 +187,12 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
         });
 
         jLabel2.setText("Hospital ID:");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        btnSubmit.setBackground(new java.awt.Color(0, 153, 153));
+        btnSubmit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSubmit.setText("Submit");
+        btnSubmit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -192,8 +208,10 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
         });
 
         jLabel3.setText("Hospital Name:");
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblName1.setText("Person ID:");
+        lblName1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtHospitalName.setEditable(false);
         txtHospitalName.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
@@ -215,8 +233,10 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
         });
 
         lblName.setText("Patient's Name:");
+        lblName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblAge.setText("Age:");
+        lblAge.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -224,60 +244,57 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGap(403, 403, 403))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(lblName)
+                            .addGap(402, 402, 402)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblCreatePassword)
+                                    .addComponent(lblConfirmPassword)
+                                    .addComponent(lblAge)
+                                    .addComponent(lblCity)
+                                    .addComponent(lblAddress)
+                                    .addComponent(lblState)
+                                    .addComponent(lblPinCode))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtNameSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtAgeSignUp)
+                                        .addComponent(txtAddressSignUp)
+                                        .addComponent(txtCitySignUp)
+                                        .addComponent(txtStateSignUp)
+                                        .addComponent(txtPinCodeSignUp)
+                                        .addComponent(txtCreatePasswordDoctor)
+                                        .addComponent(txtConfirmPasswordDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtPersonID, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtHospitalName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtHospitalID, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lblName1)
+                            .addComponent(btnSubmit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
+                        .addComponent(btnFetch, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(34, 34, 34))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(103, 465, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblName)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btnSubmit, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblCreatePassword)
-                                        .addComponent(lblConfirmPassword)
-                                        .addComponent(lblAge)
-                                        .addComponent(lblCity)
-                                        .addComponent(lblAddress)
-                                        .addComponent(lblState)
-                                        .addComponent(lblPinCode))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtNameSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtAgeSignUp)
-                                            .addComponent(txtAddressSignUp)
-                                            .addComponent(txtCitySignUp)
-                                            .addComponent(txtStateSignUp)
-                                            .addComponent(txtPinCodeSignUp)
-                                            .addComponent(txtCreatePasswordDoctor)
-                                            .addComponent(txtConfirmPasswordDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(txtPersonID, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtHospitalName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtHospitalID, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(lblName1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnFetch)
-                        .addGap(81, 81, 81))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(24, 24, 24)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(60, 60, 60)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtHospitalID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -324,7 +341,7 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
                     .addComponent(txtConfirmPasswordDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnSubmit)
-                .addContainerGap(303, Short.MAX_VALUE))
+                .addContainerGap(247, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -440,7 +457,7 @@ public class CreateHAPatientJPanel extends javax.swing.JPanel {
         p.setCreatePassword(CreatePassword);
         p.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Patient Details Created and the Patient ID is ");
+        JOptionPane.showMessageDialog(this, "New Patient Details Created and the Patient ID is " + p.getPatientID());
 
         txtPersonID.setText("");
         txtNameSignUp.setText("");

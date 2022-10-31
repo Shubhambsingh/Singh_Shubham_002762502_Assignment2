@@ -78,16 +78,23 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblHospitalName.setText("Name of the Hospital:");
+        lblHospitalName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtPinCode.setEditable(false);
 
         lblCommunity.setText("Community:");
+        lblCommunity.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblCreatePassword.setText("Create Password:");
+        lblCreatePassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblConfirmPassword.setText("Confirm Password:");
+        lblConfirmPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        btnSubmit.setBackground(new java.awt.Color(0, 204, 204));
+        btnSubmit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSubmit.setText("Submit");
+        btnSubmit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -95,10 +102,13 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
         });
 
         lblCity.setText("City:");
+        lblCity.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel7.setText("State:");
+        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblPinCode.setText("Pin Code:");
+        lblPinCode.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtCommunityName.setEditable(false);
 
@@ -109,7 +119,10 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
 
         txtState.setEditable(false);
 
+        btnLogOut.setBackground(new java.awt.Color(0, 204, 204));
+        btnLogOut.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnLogOut.setText("Back");
+        btnLogOut.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogOutActionPerformed(evt);
@@ -117,8 +130,12 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
         });
 
         jLabel2.setText("Community ID:");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        btnFetch.setText("Fetch");
+        btnFetch.setBackground(new java.awt.Color(0, 204, 204));
+        btnFetch.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnFetch.setText("Go");
+        btnFetch.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnFetch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFetchActionPerformed(evt);
@@ -135,11 +152,10 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(btnLogOut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnLogOut, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnSubmit)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(lblHospitalName)
@@ -159,9 +175,10 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
                                     .addComponent(txtHospitalName)
                                     .addComponent(txtCommunityName)
                                     .addComponent(txtCity, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
-                                    .addComponent(txtCommunityID))))
+                                    .addComponent(txtCommunityID)))
+                            .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(btnFetch)
+                        .addComponent(btnFetch, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -206,8 +223,8 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
                     .addComponent(lblConfirmPassword)
                     .addComponent(txtConfirmPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnSubmit)
-                .addContainerGap(423, Short.MAX_VALUE))
+                .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(405, Short.MAX_VALUE))
         );
 
         pack();

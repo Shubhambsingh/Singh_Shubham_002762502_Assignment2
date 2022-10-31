@@ -382,7 +382,7 @@ public class CreateVitalsJPanel extends javax.swing.JPanel {
         v.setBPD(BPD);
        
         
-        JOptionPane.showMessageDialog(this, "New Vital Details Created and the Vital ID is ");
+        JOptionPane.showMessageDialog(this, "New Vital Details Created and the Vital ID is " + v.getVitalID());
 
         txtPatientName.setText("");
         txtEncounterID.setText("");

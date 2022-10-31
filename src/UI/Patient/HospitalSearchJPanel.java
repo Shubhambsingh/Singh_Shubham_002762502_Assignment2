@@ -61,6 +61,9 @@ CommunityDirectory CommunityDirectory;
         txtSearchHospital = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         tblHospitalDirectory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -83,6 +86,7 @@ CommunityDirectory CommunityDirectory;
         jScrollPane1.setViewportView(tblHospitalDirectory);
 
         jLabel2.setText("Search Hospital:");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtSearchHospital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,9 +129,9 @@ CommunityDirectory CommunityDirectory;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtSearchHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
+                .addGap(61, 61, 61)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(456, Short.MAX_VALUE))
+                .addContainerGap(405, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -79,7 +79,13 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
         lblConfirmPassword = new javax.swing.JLabel();
         txtCommunityID = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnSubmit.setBackground(new java.awt.Color(0, 153, 153));
+        btnSubmit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSubmit.setText("Submit");
+        btnSubmit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -87,18 +93,23 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
         });
 
         lblCity.setText("City:");
+        lblCity.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel7.setText("State:");
+        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblHospitalName.setText("Name of the Hospital:");
+        lblHospitalName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblPinCode.setText("Pin Code:");
+        lblPinCode.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtPinCode.setEditable(false);
 
         txtCommunityName.setEditable(false);
 
         lblCommunity.setText("Community:");
+        lblCommunity.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtCity.setEditable(false);
 
@@ -106,12 +117,15 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
         jLabel1.setText("Create Records for a new Hospital and its Hospital Admin ");
 
         lblCreatePassword.setText("Create Password:");
+        lblCreatePassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtState.setEditable(false);
 
         jLabel2.setText("Community ID:");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblConfirmPassword.setText("Confirm Password:");
+        lblConfirmPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtCommunityID.setEditable(false);
 
@@ -127,7 +141,7 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnSubmit)
+                            .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(lblHospitalName)
@@ -148,7 +162,7 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
                                     .addComponent(txtCommunityName)
                                     .addComponent(txtCity, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
                                     .addComponent(txtCommunityID))))))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,9 +201,9 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblConfirmPassword)
                     .addComponent(txtConfirmPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnSubmit)
-                .addContainerGap(425, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(399, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -213,7 +227,7 @@ public class CreateCAHospitalJPanel extends javax.swing.JPanel {
         h.setCreatePassword(CreatePassword);
         h.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Hospital Details Created and your Hospital ID is ");
+        JOptionPane.showMessageDialog(this, "New Hospital Details Created and your Hospital ID is " + h.getHospitalID());
 
         txtHospitalName.setText("");
         txtCreatePassword.setText("");

@@ -87,10 +87,14 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
         lblName2 = new javax.swing.JLabel();
         txtDoctorID = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         jLabel2.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
-        jLabel2.setText("Doctor Records");
+        jLabel2.setText("Doctor Details");
 
         jLabel3.setText("Search Doctor:");
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtSearchPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,21 +128,30 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblDoctorDirectory);
 
+        btnPersonView.setBackground(new java.awt.Color(0, 204, 204));
+        btnPersonView.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnPersonView.setText("View");
+        btnPersonView.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnPersonView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPersonViewActionPerformed(evt);
             }
         });
 
+        btnPersonDelete.setBackground(new java.awt.Color(0, 204, 204));
+        btnPersonDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnPersonDelete.setText("Delete");
+        btnPersonDelete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnPersonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPersonDeleteActionPerformed(evt);
             }
         });
 
+        btnUpdateSignUp.setBackground(new java.awt.Color(0, 204, 204));
+        btnUpdateSignUp.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnUpdateSignUp.setText("Update");
+        btnUpdateSignUp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnUpdateSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateSignUpActionPerformed(evt);
@@ -172,20 +185,28 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
         });
 
         lblName.setText("Doctor's Name:");
+        lblName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblAge.setText("Age:");
+        lblAge.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblAddress.setText("Address:");
+        lblAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblCity.setText("City:");
+        lblCity.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblState.setText("State:");
+        lblState.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblPinCode.setText("Pin Code:");
+        lblPinCode.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblCreatePassword.setText("Update Password:");
+        lblCreatePassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblConfirmPassword.setText("Confirm Password:");
+        lblConfirmPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtConfirmPasswordDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -262,10 +283,13 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
         });
 
         jLabel4.setText("Hospital Name:");
+        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblName1.setText("Person ID:");
+        lblName1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel5.setText("Hospital ID:");
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtPersonID.setEditable(false);
         txtPersonID.addActionListener(new java.awt.event.ActionListener() {
@@ -280,6 +304,7 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
         });
 
         lblName2.setText("Doctor ID:");
+        lblName2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtDoctorID.setEditable(false);
         txtDoctorID.addActionListener(new java.awt.event.ActionListener() {
@@ -300,17 +325,14 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnPersonView)
+                                .addComponent(btnPersonView, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(34, 34, 34)
+                                .addComponent(btnPersonDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(btnPersonDelete)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnUpdateSignUp))
+                                .addComponent(btnUpdateSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
@@ -356,8 +378,11 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
                                             .addGap(59, 59, 59)))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(txtPersonID, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtDoctorID, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(28, Short.MAX_VALUE))
+                                        .addComponent(txtDoctorID, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jLabel2)))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -383,7 +408,7 @@ public class ReadHADoctorJPanel extends javax.swing.JPanel {
                     .addComponent(btnPersonDelete)
                     .addComponent(btnPersonView)
                     .addComponent(btnUpdateSignUp))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtDoctorID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblName2))

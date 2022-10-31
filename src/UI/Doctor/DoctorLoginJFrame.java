@@ -4,6 +4,7 @@
  */
 package UI.Doctor;
 
+import Model.Community.CommunityDirectory;
 import UI.Hospital.IndividualHospitalJFrame;
 import Model.Doctor.Doctor;
 import Model.Doctor.DoctorDirectory;
@@ -15,6 +16,7 @@ import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
 import Model.Vitals.VitalsDirectory;
 import UI.SystemAdmin.AdminJFrame;
+import UI.SystemAdmin.MainJFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -32,8 +34,9 @@ public class DoctorLoginJFrame extends javax.swing.JFrame {
     PatientDirectory PatientDirectory;
     EncounterDirectory EncounterDirectory;
     VitalsDirectory VitalsDirectory;
+    CommunityDirectory CommunityDirectory;
     
-    public DoctorLoginJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
+    public DoctorLoginJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
@@ -41,6 +44,7 @@ public class DoctorLoginJFrame extends javax.swing.JFrame {
         this.PatientDirectory = PatientDirectory;
         this.EncounterDirectory = EncounterDirectory;
         this.VitalsDirectory = VitalsDirectory;
+        this.CommunityDirectory = CommunityDirectory;
     }
 
     /**
@@ -83,7 +87,7 @@ public class DoctorLoginJFrame extends javax.swing.JFrame {
             }
         });
 
-        btnLogOut.setText("Log Out");
+        btnLogOut.setText("Back");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLogOutActionPerformed(evt);
@@ -149,7 +153,7 @@ public class DoctorLoginJFrame extends javax.swing.JFrame {
         {
             if ((String.valueOf(selectedSignUp.getDoctorID()).equals(txtDoctorID.getText())) && (String.valueOf(selectedSignUp.getCreatePassword()).equals(txtPassword.getText())))
             {
-                new IndividualDoctorLoginJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory,PatientDirectory,txtDoctorID.getText(), EncounterDirectory, VitalsDirectory).setVisible(true);
+                new IndividualDoctorLoginJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory,PatientDirectory,txtDoctorID.getText(), EncounterDirectory, VitalsDirectory, CommunityDirectory).setVisible(true);
                 this.dispose();
                 break;
             }
@@ -165,8 +169,8 @@ public class DoctorLoginJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLogInActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        new AdminJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
-        this.setVisible(false);
+        new MainJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     /**

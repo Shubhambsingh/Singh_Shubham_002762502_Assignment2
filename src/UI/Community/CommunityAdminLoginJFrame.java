@@ -2,17 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package UI.Hospital;
+package UI.Community;
 
+import Model.Community.Community;
 import Model.Community.CommunityDirectory;
 import Model.Doctor.DoctorDirectory;
 import Model.Encounter.EncounterDirectory;
-import Model.Hospital.Hospital;
 import Model.Hospital.HospitalDirectory;
 import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
 import Model.Vitals.VitalsDirectory;
-import UI.SystemAdmin.AdminJFrame;
 import UI.SystemAdmin.MainJFrame;
 import javax.swing.JOptionPane;
 
@@ -20,12 +19,11 @@ import javax.swing.JOptionPane;
  *
  * @author UshaSingh
  */
-public class HospitalLoginJFrame extends javax.swing.JFrame {
+public class CommunityAdminLoginJFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form IndividualHospitalJFrame
+     * Creates new form CommunityAdminLoginJFrame
      */
-    
     SignUpDirectory SignUpDirectory;
     HospitalDirectory HospitalDirectory;
     DoctorDirectory DoctorDirectory;
@@ -33,8 +31,7 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
     EncounterDirectory EncounterDirectory;
     VitalsDirectory VitalsDirectory;
     CommunityDirectory CommunityDirectory;
-    
-    public HospitalLoginJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory) {
+    public CommunityAdminLoginJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
@@ -54,27 +51,25 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblName1 = new javax.swing.JLabel();
         lblName2 = new javax.swing.JLabel();
-        txtHospitalID = new javax.swing.JTextField();
+        txtCommunityID = new javax.swing.JTextField();
         txtPassword = new javax.swing.JPasswordField();
         btnLogIn = new javax.swing.JButton();
         btnLogOut = new javax.swing.JButton();
+        lblName1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblName1.setText("Hospital ID:");
-
         lblName2.setText("Password:");
 
-        txtHospitalID.addActionListener(new java.awt.event.ActionListener() {
+        txtCommunityID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtHospitalIDActionPerformed(evt);
+                txtCommunityIDActionPerformed(evt);
             }
         });
-        txtHospitalID.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtCommunityID.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtHospitalIDKeyPressed(evt);
+                txtCommunityIDKeyPressed(evt);
             }
         });
 
@@ -92,12 +87,14 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblName1.setText("Community ID:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(83, Short.MAX_VALUE)
+                .addContainerGap(65, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -108,7 +105,7 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
                                     .addComponent(lblName2))
                                 .addGap(55, 55, 55)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtHospitalID)
+                                    .addComponent(txtCommunityID)
                                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(144, 144, 144))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -123,7 +120,7 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
                 .addGap(183, 183, 183)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblName1)
-                    .addComponent(txtHospitalID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCommunityID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblName2)
@@ -136,34 +133,33 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtHospitalIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHospitalIDActionPerformed
+    private void txtCommunityIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCommunityIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtHospitalIDActionPerformed
+    }//GEN-LAST:event_txtCommunityIDActionPerformed
 
-    private void txtHospitalIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtHospitalIDKeyPressed
+    private void txtCommunityIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCommunityIDKeyPressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtHospitalIDKeyPressed
+    }//GEN-LAST:event_txtCommunityIDKeyPressed
 
     private void btnLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogInActionPerformed
         // TODO add your handling code here:
         boolean check = false;
-        for(Hospital selectedSignUp : HospitalDirectory.getHospitalDirectory())
+        for(Community selectedSignUp : CommunityDirectory.getCommunityDirectory())
         {
-                if ((String.valueOf(selectedSignUp.getHospitalID()).equals(txtHospitalID.getText())) && (String.valueOf(selectedSignUp.getCreatePassword()).equals(txtPassword.getText())))
-                {
-                    new IndividualHospitalJFrame (SignUpDirectory, HospitalDirectory, txtHospitalID.getText(),DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).setVisible(true);
-                    this.dispose();
-                    break;
-                }
-                else
-                {
-                    check = true;
-                }
+            if ((String.valueOf(selectedSignUp.getCommunityID()).equals(txtCommunityID.getText())) && (String.valueOf(selectedSignUp.getCreatePassword()).equals(txtPassword.getText())))
+            {
+                new CommunityJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory,PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory, txtCommunityID.getText()).setVisible(true);
+                this.dispose();
+                break;
             }
+            else
+            {
+                check = true;
+            }
+        }
         if(check == true){
             JOptionPane.showMessageDialog(this, "This user doesn't exist");
-            }
-        
+        }
     }//GEN-LAST:event_btnLogInActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
@@ -188,21 +184,20 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HospitalLoginJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CommunityAdminLoginJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HospitalLoginJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CommunityAdminLoginJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HospitalLoginJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CommunityAdminLoginJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HospitalLoginJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CommunityAdminLoginJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
-//                new HospitalLoginJFrame().setVisible(true);
+//                new CommunityAdminLoginJFrame().setVisible(true);
 //            }
 //        });
     }
@@ -212,7 +207,7 @@ public class HospitalLoginJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnLogOut;
     private javax.swing.JLabel lblName1;
     private javax.swing.JLabel lblName2;
-    private javax.swing.JTextField txtHospitalID;
+    private javax.swing.JTextField txtCommunityID;
     private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
 }

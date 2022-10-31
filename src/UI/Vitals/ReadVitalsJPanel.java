@@ -89,6 +89,9 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         btnPersonDelete = new javax.swing.JButton();
         btnUpdateSignUp = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         jLabel1.setText("Doctor ID:");
 
         txtDoctorID.setEditable(false);
@@ -116,7 +119,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         });
 
         jLabel2.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
-        jLabel2.setText("Vitals History");
+        jLabel2.setText("Patient's Vital");
 
         tblVitalsDirectory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -167,21 +170,30 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
 
         jLabel11.setText("BP Diastolic (L):");
 
+        btnView.setBackground(new java.awt.Color(0, 204, 204));
+        btnView.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnView.setText("View");
+        btnView.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewActionPerformed(evt);
             }
         });
 
+        btnPersonDelete.setBackground(new java.awt.Color(0, 204, 204));
+        btnPersonDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnPersonDelete.setText("Delete");
+        btnPersonDelete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnPersonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPersonDeleteActionPerformed(evt);
             }
         });
 
+        btnUpdateSignUp.setBackground(new java.awt.Color(0, 204, 204));
+        btnUpdateSignUp.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnUpdateSignUp.setText("Update");
+        btnUpdateSignUp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnUpdateSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateSignUpActionPerformed(evt);
@@ -216,7 +228,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtDoctorName, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE))
+                                        .addComponent(txtDoctorName, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE))
                                     .addComponent(txtSearchPerson)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,25 +243,21 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                        .addComponent(txtBPS)
+                                                        .addComponent(txtTemperature, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addComponent(txtDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(txtEncounterID, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel11)
                                                     .addGroup(layout.createSequentialGroup()
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                            .addComponent(txtBPS)
-                                                            .addComponent(txtTemperature, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                            .addComponent(txtDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addGroup(layout.createSequentialGroup()
-                                                                .addGap(11, 11, 11)
-                                                                .addComponent(jLabel11))
-                                                            .addGroup(layout.createSequentialGroup()
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(jLabel10))
-                                                            .addGroup(layout.createSequentialGroup()
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(jLabel13))))
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel10))
                                                     .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(txtEncounterID, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                        .addComponent(jLabel7)))
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel13))
+                                                    .addComponent(jLabel7))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(txtPatientID, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -259,14 +267,17 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
                                                         .addComponent(txtTimeStamp, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                             .addComponent(txtPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btnView)
+                                        .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(22, 22, 22)
+                                        .addComponent(btnPersonDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(btnPersonDelete)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnUpdateSignUp)))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                        .addComponent(btnUpdateSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 76, Short.MAX_VALUE)))))
                 .addGap(27, 27, 27))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnPersonDelete, btnUpdateSignUp, btnView});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -317,8 +328,11 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel11)
                     .addComponent(txtBPS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtBPD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnPersonDelete, btnUpdateSignUp, btnView});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtDoctorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoctorIDActionPerformed
@@ -381,9 +395,9 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         }
 
         DefaultTableModel model = (DefaultTableModel) tblVitalsDirectory.getModel();
-        Doctor selectedSignUp = (Doctor) model.getValueAt(selectedRowIndex,0);
+        Vitals selectedSignUp = (Vitals) model.getValueAt(selectedRowIndex,0);
 
-        DoctorDirectory.deleteEmployee(selectedSignUp);
+        VitalsDirectory.deleteEmployee(selectedSignUp);
 
         JOptionPane.showMessageDialog(this, "Person Details deleted.");
 
@@ -398,7 +412,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         }
 
         DefaultTableModel model = (DefaultTableModel) tblVitalsDirectory.getModel();
-        Doctor su = (Doctor) model.getValueAt(tblVitalsDirectory.getSelectedRow(), 0);
+        Vitals v = (Vitals) model.getValueAt(tblVitalsDirectory.getSelectedRow(), 0);
 
         if (tblVitalsDirectory.getSelectedRowCount()==1) {
 
@@ -414,7 +428,6 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
             int BPS = Integer.parseInt(txtBPS.getText());
             int BPD = Integer.parseInt(txtBPD.getText());
 
-            Vitals v = VitalsDirectory.addNewVitals();
 
             v.setDoctorID(DoctorID);
             v.setDoctorName(DoctorName);
@@ -440,7 +453,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
             model.setValueAt(BPS, tblVitalsDirectory.getSelectedRow(), 10);
             model.setValueAt(BPD, tblVitalsDirectory.getSelectedRow(), 11);
 
-            JOptionPane.showMessageDialog(this, "Person Details Updated");
+            JOptionPane.showMessageDialog(this, "Vitals Details Updated");
 
             txtPatientName.setText("");
             txtPatientID.setText("");
@@ -498,7 +511,7 @@ public class ReadVitalsJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         
         for (Vitals su : VitalsDirectory.getVitalsDirectory()){
-            if (String.valueOf(su.getEncounterID()).equals(txtEncounterID.getText())){
+            if (String.valueOf(su.getDoctorID()).equals(txtDoctorID.getText())){
             Object[] row = new Object[13];
             row[0] = su;
             row[1] = su.getVitalID();

@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UI.Hospital;
 
@@ -13,19 +13,17 @@ import Model.Hospital.HospitalDirectory;
 import Model.Patient.PatientDirectory;
 import Model.SignUp.SignUpDirectory;
 import Model.Vitals.VitalsDirectory;
-import UI.SystemAdmin.AdminJFrame;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author UshaSingh
  */
-public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
+public class CreateCAHospitalJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form HospitalAdminJFrame
+     * Creates new form CreateCAHospitalJPanel
      */
-    
     SignUpDirectory SignUpDirectory;
     HospitalDirectory HospitalDirectory;
     DoctorDirectory DoctorDirectory;
@@ -33,8 +31,7 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
     EncounterDirectory EncounterDirectory;
     VitalsDirectory VitalsDirectory;
     CommunityDirectory CommunityDirectory;
-    
-    public HospitalCreateAdminJFrame(SignUpDirectory SignUpDirectory,HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory,EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory) {
+    public CreateCAHospitalJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory, String CID) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
@@ -43,6 +40,15 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
         this.EncounterDirectory = EncounterDirectory;
         this.VitalsDirectory = VitalsDirectory;
         this.CommunityDirectory = CommunityDirectory;
+        for(Community selectedSignUp : CommunityDirectory.getCommunityDirectory()){
+            if (String.valueOf(selectedSignUp.getCommunityID()).equals(CID)){
+            txtCommunityID.setText(String.valueOf(selectedSignUp.getCommunityID()));
+            txtCommunityName.setText(String.valueOf(selectedSignUp.getCommunityName())); 
+            txtCity.setText(String.valueOf(selectedSignUp.getCity()));
+            txtState.setText(String.valueOf(selectedSignUp.getAddress()));
+            txtPinCode.setText(String.valueOf(selectedSignUp.getPinCode()));
+            }
+        }
     }
 
     /**
@@ -54,38 +60,24 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblHospitalName = new javax.swing.JLabel();
-        txtPinCode = new javax.swing.JTextField();
-        lblCommunity = new javax.swing.JLabel();
-        txtCreatePassword = new javax.swing.JPasswordField();
-        lblCreatePassword = new javax.swing.JLabel();
-        txtConfirmPassword = new javax.swing.JPasswordField();
-        lblConfirmPassword = new javax.swing.JLabel();
         btnSubmit = new javax.swing.JButton();
         txtHospitalName = new javax.swing.JTextField();
         lblCity = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        lblHospitalName = new javax.swing.JLabel();
         lblPinCode = new javax.swing.JLabel();
+        txtPinCode = new javax.swing.JTextField();
         txtCommunityName = new javax.swing.JTextField();
+        lblCommunity = new javax.swing.JLabel();
         txtCity = new javax.swing.JTextField();
+        txtCreatePassword = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
+        lblCreatePassword = new javax.swing.JLabel();
         txtState = new javax.swing.JTextField();
-        btnLogOut = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        txtConfirmPassword = new javax.swing.JPasswordField();
+        lblConfirmPassword = new javax.swing.JLabel();
         txtCommunityID = new javax.swing.JTextField();
-        btnFetch = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        lblHospitalName.setText("Name of the Hospital:");
-
-        txtPinCode.setEditable(false);
-
-        lblCommunity.setText("Community:");
-
-        lblCreatePassword.setText("Create Password:");
-
-        lblConfirmPassword.setText("Confirm Password:");
 
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -98,44 +90,40 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
 
         jLabel7.setText("State:");
 
+        lblHospitalName.setText("Name of the Hospital:");
+
         lblPinCode.setText("Pin Code:");
 
+        txtPinCode.setEditable(false);
+
         txtCommunityName.setEditable(false);
+
+        lblCommunity.setText("Community:");
 
         txtCity.setEditable(false);
 
         jLabel1.setFont(new java.awt.Font("Futura", 0, 18)); // NOI18N
         jLabel1.setText("Create Records for a new Hospital and its Hospital Admin ");
 
-        txtState.setEditable(false);
+        lblCreatePassword.setText("Create Password:");
 
-        btnLogOut.setText("Back");
-        btnLogOut.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogOutActionPerformed(evt);
-            }
-        });
+        txtState.setEditable(false);
 
         jLabel2.setText("Community ID:");
 
-        btnFetch.setText("Fetch");
-        btnFetch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFetchActionPerformed(evt);
-            }
-        });
+        lblConfirmPassword.setText("Confirm Password:");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        txtCommunityID.setEditable(false);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnLogOut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -159,19 +147,14 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
                                     .addComponent(txtHospitalName)
                                     .addComponent(txtCommunityName)
                                     .addComponent(txtCity, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
-                                    .addComponent(txtCommunityID))))
-                        .addGap(18, 18, 18)
-                        .addComponent(btnFetch)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                    .addComponent(txtCommunityID))))))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHospitalName)
@@ -179,8 +162,7 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtCommunityID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnFetch))
+                    .addComponent(txtCommunityID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(8, 8, 8)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCommunity)
@@ -207,10 +189,8 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
                     .addComponent(txtConfirmPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnSubmit)
-                .addContainerGap(423, Short.MAX_VALUE))
+                .addContainerGap(425, Short.MAX_VALUE))
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
@@ -236,95 +216,12 @@ public class HospitalCreateAdminJFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "New Hospital Details Created and your Hospital ID is ");
 
         txtHospitalName.setText("");
-        txtCommunityID.setText("");
-        txtCommunityName.setText("");
-        txtCity.setText("");
-        txtState.setText("");
-        txtPinCode.setText("");
         txtCreatePassword.setText("");
         txtConfirmPassword.setText("");
-
     }//GEN-LAST:event_btnSubmitActionPerformed
 
-    private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        new AdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnLogOutActionPerformed
-
-    private void btnFetchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFetchActionPerformed
-        // TODO add your handling code here:
-        boolean check = false;
-        for(Community selectedSignUp : CommunityDirectory.getCommunityDirectory())
-        {
-            {{
-                if (String.valueOf(selectedSignUp.getCommunityID()).equals(txtCommunityID.getText()))
-                {
-                    txtCommunityName.setText(String.valueOf(selectedSignUp.getCommunityName()));
-                    txtCity.setText(String.valueOf(selectedSignUp.getCity()));
-                    txtState.setText(String.valueOf(selectedSignUp.getState()));
-                    txtPinCode.setText(String.valueOf(selectedSignUp.getPinCode()));
-                    check = false;
-                    break;
-                }
-                else
-                {
-                    check = true;
-                }
-            }}}
-        if(check == true){
-            JOptionPane.showMessageDialog(this, "This user doesn't exist");
-            } 
-    
-    }//GEN-LAST:event_btnFetchActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HospitalCreateAdminJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HospitalCreateAdminJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HospitalCreateAdminJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HospitalCreateAdminJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new HospitalReadAdminJFrame().setVisible(true);
-//            }
-//        });
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new HospitalCreateAdminJFrame().setVisible(true);
-//            }
-//        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnFetch;
-    private javax.swing.JButton btnLogOut;
     private javax.swing.JButton btnSubmit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UI.SystemAdmin;
+package UI.Person;
 
 import Model.Doctor.Doctor;
 import Model.Doctor.DoctorDirectory;
@@ -20,10 +20,10 @@ import javax.swing.table.TableRowSorter;
  *
  * @author UshaSingh
  */
-public class ReadAdminJPanel extends javax.swing.JPanel {
+public class ReadPersonJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ReadAdminJPanel
+     * Creates new form ReadPersonJPanel
      */
     
     SignUpDirectory SignUpDirectory;
@@ -32,7 +32,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
     PatientDirectory PatientDirectory;
     
     
-    public ReadAdminJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory) {
+    public ReadPersonJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory) {
         initComponents();
         
         this.SignUpDirectory = SignUpDirectory;
@@ -79,9 +79,6 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         txtSearchPerson = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 255, 255));
-        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
         tblPersonDirectory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
@@ -90,7 +87,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "PersonID", "Name", "DoB", "Age", "Address", "City", "State", "Pin Code", "Password"
+                "Name", "PersonID", "DoB", "Age", "Address", "City", "State", "Pin Code", "Password"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -103,20 +100,14 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblPersonDirectory);
 
-        btnPersonView.setBackground(new java.awt.Color(0, 204, 204));
-        btnPersonView.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnPersonView.setText("View");
-        btnPersonView.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnPersonView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPersonViewActionPerformed(evt);
             }
         });
 
-        btnPersonDelete.setBackground(new java.awt.Color(0, 204, 204));
-        btnPersonDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnPersonDelete.setText("Delete");
-        btnPersonDelete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnPersonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPersonDeleteActionPerformed(evt);
@@ -134,14 +125,9 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblDoB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblDoB.setText("Date of Birth :");
-        lblDoB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblDoB.setText("DoB:");
 
-        btnUpdateSignUp.setBackground(new java.awt.Color(0, 204, 204));
-        btnUpdateSignUp.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnUpdateSignUp.setText("Update");
-        btnUpdateSignUp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnUpdateSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateSignUpActionPerformed(evt);
@@ -153,9 +139,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblAge.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAge.setText("Age:");
-        lblAge.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtDoBSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,13 +152,9 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblAddress.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAddress.setText("Address:");
-        lblAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lblCity.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCity.setText("City:");
-        lblCity.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtAgeSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -182,9 +162,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblState.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblState.setText("State:");
-        lblState.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtAddressSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -192,9 +170,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblPinCode.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPinCode.setText("Pin Code:");
-        lblPinCode.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtCitySignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -219,20 +195,14 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblCreatePassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCreatePassword.setText("Update Password:");
-        lblCreatePassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lblConfirmPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblConfirmPassword.setText("Confirm Password:");
-        lblConfirmPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lblName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblName.setText("Name:");
-        lblName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Futura", 1, 18)); // NOI18N
-        jLabel1.setText("Person Details");
+        jLabel1.setText("Person Records");
 
         txtCreatePasswordSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -268,7 +238,6 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         });
 
         jLabel2.setText("Search Person:");
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -284,38 +253,35 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel1)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnPersonView, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPersonView)
                         .addGap(18, 18, 18)
-                        .addComponent(btnPersonDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblCreatePassword)
-                            .addComponent(lblConfirmPassword)
-                            .addComponent(lblAge)
-                            .addComponent(lblCity)
-                            .addComponent(lblAddress)
-                            .addComponent(lblName)
-                            .addComponent(lblState)
-                            .addComponent(lblPinCode)
-                            .addComponent(lblDoB))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtAgeSignUp)
-                            .addComponent(txtAddressSignUp)
-                            .addComponent(txtCitySignUp)
-                            .addComponent(txtStateSignUp)
-                            .addComponent(txtDoBSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                            .addComponent(txtPinCodeSignUp)
-                            .addComponent(txtNameSignUp)
-                            .addComponent(txtCreatePasswordSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                            .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))
-                        .addGap(29, 29, 29)
-                        .addComponent(btnUpdateSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(46, Short.MAX_VALUE))
+                        .addComponent(btnPersonDelete))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnUpdateSignUp)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblCreatePassword)
+                                .addComponent(lblConfirmPassword)
+                                .addComponent(lblAge)
+                                .addComponent(lblCity)
+                                .addComponent(lblAddress)
+                                .addComponent(lblName)
+                                .addComponent(lblState)
+                                .addComponent(lblPinCode)
+                                .addComponent(lblDoB))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtAgeSignUp)
+                                .addComponent(txtAddressSignUp)
+                                .addComponent(txtCitySignUp)
+                                .addComponent(txtStateSignUp)
+                                .addComponent(txtDoBSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                .addComponent(txtPinCodeSignUp)
+                                .addComponent(txtNameSignUp)
+                                .addComponent(txtCreatePasswordSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)))))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblAddress, lblAge, lblCity, lblConfirmPassword, lblCreatePassword, lblDoB, lblName, lblPinCode, lblState});
-
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -328,10 +294,10 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
                 .addGap(14, 14, 14)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnPersonDelete, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(btnPersonView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnPersonView)
+                    .addComponent(btnPersonDelete))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblName)
                     .addComponent(txtNameSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -359,25 +325,18 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPinCode)
                     .addComponent(txtPinCodeSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblCreatePassword)
-                            .addComponent(txtCreatePasswordSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblConfirmPassword)
-                            .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                        .addComponent(btnUpdateSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(102, 102, 102))))
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCreatePassword)
+                    .addComponent(txtCreatePasswordSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblConfirmPassword)
+                    .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnUpdateSignUp)
+                .addContainerGap(54, Short.MAX_VALUE))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lblAddress, lblAge, lblCity, lblConfirmPassword, lblCreatePassword, lblDoB, lblName, lblPinCode, lblState});
-
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNameSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameSignUpActionPerformed
@@ -392,7 +351,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         }
         
         DefaultTableModel model = (DefaultTableModel) tblPersonDirectory.getModel();
-        SignUp su = (SignUp) model.getValueAt(tblPersonDirectory.getSelectedRow(), 1);
+        SignUp su = (SignUp) model.getValueAt(tblPersonDirectory.getSelectedRow(), 0);
         
         if (tblPersonDirectory.getSelectedRowCount()==1) {
             
@@ -491,7 +450,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         su.setConfirmPassword(ConfirmPassword);
 
         
-        model.setValueAt(Name, tblPersonDirectory.getSelectedRow(), 1);
+        model.setValueAt(Name, tblPersonDirectory.getSelectedRow(), 0);
         model.setValueAt(DoB, tblPersonDirectory.getSelectedRow(), 2);
         model.setValueAt(Age, tblPersonDirectory.getSelectedRow(), 3);
         model.setValueAt(Address, tblPersonDirectory.getSelectedRow(), 4);
@@ -501,6 +460,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         model.setValueAt(CreatePassword, tblPersonDirectory.getSelectedRow(), 8);
         //model.setValueAt(ConfirmPassword, tblPersonDirectory.getSelectedRow(), 8);
         
+        populateTable();
         JOptionPane.showMessageDialog(this, "Person Details Updated");
 
         txtNameSignUp.setText("");
@@ -522,7 +482,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
                     d.setState(State);
                     d.setPinCode(PinCode);
                 }
-        populateTable();
+        
     }//GEN-LAST:event_btnUpdateSignUpActionPerformed
     }
     }
@@ -550,7 +510,7 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         }
         
         DefaultTableModel model = (DefaultTableModel) tblPersonDirectory.getModel();
-        SignUp selectedSignUp = (SignUp) model.getValueAt(selectedRowIndex,1);
+        SignUp selectedSignUp = (SignUp) model.getValueAt(selectedRowIndex,0);
         
         txtNameSignUp.setText(String.valueOf(selectedSignUp.getName()));
         txtDoBSignUp.setText(String.valueOf(selectedSignUp.getDoB()));
@@ -577,17 +537,28 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         }
         
         DefaultTableModel model = (DefaultTableModel) tblPersonDirectory.getModel();
-        SignUp selectedSignUp = (SignUp) model.getValueAt(selectedRowIndex,1);     
+        SignUp selectedSignUp = (SignUp) model.getValueAt(selectedRowIndex,0);     
         SignUpDirectory.deleteEmployee(selectedSignUp);
+        
+        populateTable();
+        
+        JOptionPane.showMessageDialog(this, "Person Details deleted.");
+        
+        txtNameSignUp.setText("");
+        txtDoBSignUp.setText("");
+        txtAgeSignUp.setText("");
+        txtAddressSignUp.setText("");
+        txtCitySignUp.setText("");
+        txtStateSignUp.setText("");
+        txtPinCodeSignUp.setText("");
+        txtCreatePasswordSignUp.setText("");
+        txtConfirmPasswordSignUp.setText("");
         
         for (Doctor d : DoctorDirectory.getDoctorDirectory()){
                 if (String.valueOf(d.getDoctorName()).equals(txtNameSignUp.getText())){
                    DoctorDirectory.deleteEmployee(d);
-                }
-        
-        JOptionPane.showMessageDialog(this, "Person Details deleted.");
-        
-        populateTable();                      
+                }  
+                           
     }//GEN-LAST:event_btnPersonDeleteActionPerformed
     }
     private void txtCreatePasswordSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCreatePasswordSignUpActionPerformed
@@ -693,8 +664,8 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
         for (SignUp su : SignUpDirectory.getSignUpDirectory()){
             
             Object[] row = new Object[9];
-            row[0] = su.getPersonID();
-            row[1] = su;
+            row[0] = su;
+            row[1] = su.getPersonID();
             row[2] = su.getDoB();
             row[3] = su.getAge();
             row[4] = su.getAddress();
@@ -703,7 +674,6 @@ public class ReadAdminJPanel extends javax.swing.JPanel {
             row[7] = su.getPinCode();
             row[8] = su.getCreatePassword();
             //row[8] = su.getConfirmPassword();
-            
             
             model.addRow(row);
             

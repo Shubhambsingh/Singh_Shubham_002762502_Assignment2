@@ -23,8 +23,9 @@
                   <Component id="btnHospitalAdmin" max="32767" attributes="0"/>
                   <Component id="btnDoctor" max="32767" attributes="0"/>
                   <Component id="btnPatient" max="32767" attributes="0"/>
+                  <Component id="btnCommunityAdmin" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="438" max="32767" attributes="0"/>
+              <EmptySpace pref="420" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -39,7 +40,9 @@
               <Component id="btnDoctor" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnPatient" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="622" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="btnCommunityAdmin" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="587" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -75,6 +78,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPatientActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnCommunityAdmin">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Community Admin"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCommunityAdminActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

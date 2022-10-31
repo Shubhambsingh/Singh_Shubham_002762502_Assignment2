@@ -4,6 +4,7 @@
  */
 package UI.Doctor;
 
+import Model.Community.CommunityDirectory;
 import Model.Doctor.DoctorDirectory;
 import Model.Encounter.EncounterDirectory;
 import Model.Hospital.HospitalDirectory;
@@ -28,8 +29,9 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
     PatientDirectory PatientDirectory;
     EncounterDirectory EncounterDirectory;
     VitalsDirectory VitalsDirectory ;
+    CommunityDirectory CommunityDirectory;
     String DID;
-    public IndividualDoctorLoginJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory,String DID, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
+    public IndividualDoctorLoginJFrame(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory,String DID, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory) {
         initComponents();
     this.SignUpDirectory = SignUpDirectory;
     this.HospitalDirectory = HospitalDirectory;
@@ -37,6 +39,7 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
     this.PatientDirectory = PatientDirectory;
     this.VitalsDirectory  = VitalsDirectory;
     this.EncounterDirectory = EncounterDirectory;
+    this.CommunityDirectory = CommunityDirectory;
     this.DID = DID;
   
     }
@@ -149,7 +152,7 @@ public class IndividualDoctorLoginJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCreateVitalsActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        new DoctorLoginJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
+        new DoctorLoginJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 

@@ -4,6 +4,7 @@
  */
 package UI.SystemAdmin;
 
+import Model.Community.CommunityDirectory;
 import Model.Doctor.DoctorDirectory;
 import Model.Encounter.EncounterDirectory;
 import Model.Hospital.HospitalDirectory;
@@ -24,7 +25,7 @@ public class LoginAdminJPanel extends javax.swing.JPanel {
     /**
      * Creates new form LoginAdminJPanel
      */
-    
+    CommunityDirectory CommunityDirectory;
     SignUpDirectory SignUpDirectory;
     HospitalDirectory HospitalDirectory;
     DoctorDirectory DoctorDirectory;
@@ -32,7 +33,7 @@ public class LoginAdminJPanel extends javax.swing.JPanel {
     EncounterDirectory EncounterDirectory;
     VitalsDirectory VitalsDirectory;
     
-    public LoginAdminJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
+    public LoginAdminJPanel(SignUpDirectory SignUpDirectory, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
@@ -40,6 +41,7 @@ public class LoginAdminJPanel extends javax.swing.JPanel {
         this.PatientDirectory = PatientDirectory;
         this.EncounterDirectory = EncounterDirectory;
         this.VitalsDirectory = VitalsDirectory;
+        this.CommunityDirectory = CommunityDirectory;
     }
 
     /**
@@ -133,7 +135,7 @@ public class LoginAdminJPanel extends javax.swing.JPanel {
 
         if(Username.equals("Admin") && Password.equals("Admin")){
 
-            new AdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).show();
+            new AdminJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).show();
             //To dispose a Frame from Panel
             Component comp = SwingUtilities.getRoot(this);
             ((Window) comp).dispose();

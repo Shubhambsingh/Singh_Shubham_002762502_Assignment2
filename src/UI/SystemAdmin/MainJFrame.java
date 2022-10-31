@@ -4,6 +4,7 @@
  */
 package UI.SystemAdmin;
 
+import Model.Community.CommunityDirectory;
 import Model.Doctor.DoctorDirectory;
 import Model.Encounter.EncounterDirectory;
 import Model.Hospital.HospitalDirectory;
@@ -29,6 +30,7 @@ public class MainJFrame extends javax.swing.JFrame {
     PatientDirectory PatientDirectory;
     EncounterDirectory EncounterDirectory;
     VitalsDirectory VitalsDirectory;
+    CommunityDirectory CommunityDirectory;
     
     //final int PersonID = 1;
     public MainJFrame() {
@@ -39,11 +41,12 @@ public class MainJFrame extends javax.swing.JFrame {
         PatientDirectory = new PatientDirectory();
         EncounterDirectory = new EncounterDirectory();
         VitalsDirectory = new VitalsDirectory();
+        CommunityDirectory = new CommunityDirectory();
 
  
     }
     
-    public MainJFrame(SignUpDirectory SignUpDirectory1, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
+    public MainJFrame(SignUpDirectory SignUpDirectory1, HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory1;
         this.HospitalDirectory = HospitalDirectory;
@@ -51,6 +54,7 @@ public class MainJFrame extends javax.swing.JFrame {
         this.PatientDirectory = PatientDirectory;
         this.EncounterDirectory = EncounterDirectory;
         this.VitalsDirectory = VitalsDirectory;
+        this.CommunityDirectory = CommunityDirectory;
         
     }
 
@@ -75,7 +79,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         splitPaneMain.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        btnAdmin.setText("Log In as Admin");
+        btnAdmin.setText("System Admin");
         btnAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdminActionPerformed(evt);
@@ -163,13 +167,13 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminActionPerformed
         
-        LoginAdminJPanel loginadminpanel = new LoginAdminJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory);
+        LoginAdminJPanel loginadminpanel = new LoginAdminJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory);
         splitPaneMain.setRightComponent(loginadminpanel);
     }//GEN-LAST:event_btnAdminActionPerformed
 
     private void btnCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCustomerActionPerformed
         
-        LoginUserJPanel loginuserpanel = new LoginUserJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory);
+        LoginUserJPanel loginuserpanel = new LoginUserJPanel(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory);
         splitPaneMain.setRightComponent(loginuserpanel);
     }//GEN-LAST:event_btnCustomerActionPerformed
 

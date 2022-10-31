@@ -4,6 +4,7 @@
  */
 package UI.Patient;
 
+import Model.Community.CommunityDirectory;
 import Model.Doctor.DoctorDirectory;
 import Model.Encounter.EncounterDirectory;
 import Model.Hospital.HospitalDirectory;
@@ -30,8 +31,9 @@ public class PatientLoginJFrame extends javax.swing.JFrame {
     PatientDirectory PatientDirectory;
     EncounterDirectory EncounterDirectory;
     VitalsDirectory VitalsDirectory;
+    CommunityDirectory CommunityDirectory;
     
-    public PatientLoginJFrame(SignUpDirectory SignUpDirectory,HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory) {
+    public PatientLoginJFrame(SignUpDirectory SignUpDirectory,HospitalDirectory HospitalDirectory, DoctorDirectory DoctorDirectory, PatientDirectory PatientDirectory, EncounterDirectory EncounterDirectory, VitalsDirectory VitalsDirectory, CommunityDirectory CommunityDirectory) {
         initComponents();
         this.SignUpDirectory = SignUpDirectory;
         this.HospitalDirectory = HospitalDirectory;
@@ -39,6 +41,7 @@ public class PatientLoginJFrame extends javax.swing.JFrame {
         this.PatientDirectory = PatientDirectory;
         this.EncounterDirectory = EncounterDirectory;
         this.VitalsDirectory = VitalsDirectory;
+        this.CommunityDirectory = CommunityDirectory;
     }
 
     /**
@@ -133,7 +136,7 @@ public class PatientLoginJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        new MainJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
+        new MainJFrame (SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnLogOutActionPerformed
 
@@ -152,7 +155,7 @@ public class PatientLoginJFrame extends javax.swing.JFrame {
         {
             if ((String.valueOf(selectedSignUp.getPatientID()).equals(txtPatientID.getText())) && (String.valueOf(selectedSignUp.getCreatePassword()).equals(txtPassword.getText())))
             {
-                new IndividualPatientLoginJFrame(SignUpDirectory, HospitalDirectory,DoctorDirectory, txtPatientID.getText(), PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
+                new IndividualPatientLoginJFrame(SignUpDirectory, HospitalDirectory,DoctorDirectory, txtPatientID.getText(), PatientDirectory, EncounterDirectory, VitalsDirectory, CommunityDirectory).setVisible(true);
                 this.dispose();
                 break;
             }

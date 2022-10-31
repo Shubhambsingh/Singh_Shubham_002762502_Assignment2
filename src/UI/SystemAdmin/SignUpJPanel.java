@@ -56,7 +56,6 @@ public class SignUpJPanel extends javax.swing.JPanel {
         txtNameSignUp = new javax.swing.JTextField();
         btnSignUp = new javax.swing.JButton();
         txtDoBSignUp = new javax.swing.JTextField();
-        btnBack = new javax.swing.JButton();
         txtAgeSignUp = new javax.swing.JTextField();
         txtAddressSignUp = new javax.swing.JTextField();
         txtCitySignUp = new javax.swing.JTextField();
@@ -71,10 +70,18 @@ public class SignUpJPanel extends javax.swing.JPanel {
         lblState = new javax.swing.JLabel();
         lblPinCode = new javax.swing.JLabel();
         txtCreatePasswordSignUp = new javax.swing.JPasswordField();
+        jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblCreatePassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCreatePassword.setText("Create Password:");
+        lblCreatePassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        lblConfirmPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblConfirmPassword.setText("Confirm Password:");
+        lblConfirmPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtNameSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,7 +94,10 @@ public class SignUpJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnSignUp.setText("Sign Up");
+        btnSignUp.setBackground(new java.awt.Color(0, 204, 204));
+        btnSignUp.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSignUp.setText("Done");
+        btnSignUp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSignUpActionPerformed(evt);
@@ -107,13 +117,6 @@ public class SignUpJPanel extends javax.swing.JPanel {
         txtDoBSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtDoBSignUpKeyPressed(evt);
-            }
-        });
-
-        btnBack.setText("Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
             }
         });
 
@@ -158,19 +161,33 @@ public class SignUpJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblName.setText("Name:");
+        lblName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lblDoB.setText("DoB:");
+        lblDoB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDoB.setText("Date of Birth:");
+        lblDoB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        lblAge.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAge.setText("Age:");
+        lblAge.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        lblAddress.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAddress.setText("Address:");
+        lblAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        lblCity.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCity.setText("City:");
+        lblCity.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        lblState.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblState.setText("State:");
+        lblState.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        lblPinCode.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPinCode.setText("Pin Code:");
+        lblPinCode.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         txtCreatePasswordSignUp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -178,56 +195,61 @@ public class SignUpJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Sign Up");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(522, Short.MAX_VALUE)
-                .addComponent(btnBack)
-                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(153, 153, 153)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lblCreatePassword)
-                                .addComponent(lblConfirmPassword))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtCreatePasswordSignUp)
-                                .addComponent(txtConfirmPasswordSignUp)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSignUp)
-                            .addGap(9, 9, 9)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblPinCode)
-                            .addComponent(lblAddress)
-                            .addComponent(lblAge)
-                            .addComponent(lblDoB)
-                            .addComponent(lblName)
-                            .addComponent(lblCity)
-                            .addComponent(lblState))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(119, 119, 119)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtNameSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                            .addComponent(txtDoBSignUp)
-                            .addComponent(txtAgeSignUp)
-                            .addComponent(txtAddressSignUp)
-                            .addComponent(txtCitySignUp)
-                            .addComponent(txtStateSignUp)
-                            .addComponent(txtPinCodeSignUp))))
-                .addContainerGap(154, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(lblConfirmPassword)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(lblPinCode)
+                                        .addComponent(lblAddress)
+                                        .addComponent(lblAge)
+                                        .addComponent(lblDoB)
+                                        .addComponent(lblName)
+                                        .addComponent(lblCity)
+                                        .addComponent(lblState)
+                                        .addComponent(lblCreatePassword))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtNameSignUp)
+                                        .addComponent(txtDoBSignUp)
+                                        .addComponent(txtAgeSignUp)
+                                        .addComponent(txtAddressSignUp)
+                                        .addComponent(txtCitySignUp)
+                                        .addComponent(txtStateSignUp, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
+                                        .addComponent(txtPinCodeSignUp)
+                                        .addComponent(txtCreatePasswordSignUp))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(211, 211, 211)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(180, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblAddress, lblAge, lblCity, lblConfirmPassword, lblCreatePassword, lblDoB, lblName, lblPinCode, lblState});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnBack)
-                .addGap(56, 56, 56)
+                .addGap(42, 42, 42)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblName)
                     .addComponent(txtNameSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -263,10 +285,15 @@ public class SignUpJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtConfirmPasswordSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblConfirmPassword))
-                .addGap(18, 18, 18)
-                .addComponent(btnSignUp)
-                .addContainerGap(371, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(294, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lblAddress, lblAge, lblCity, lblConfirmPassword, lblCreatePassword, lblDoB, lblName, lblPinCode, lblState});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txtConfirmPasswordSignUp, txtCreatePasswordSignUp, txtPinCodeSignUp});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNameSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameSignUpActionPerformed
@@ -371,7 +398,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         su.setCreatePassword(CreatePassword);
         su.setConfirmPassword(ConfirmPassword);
 
-        JOptionPane.showMessageDialog(this, "New Person Details Created");
+        JOptionPane.showMessageDialog(this, "New Person Details Created and your Person ID is: " + su.getPersonID());
 
         txtNameSignUp.setText("");
         txtDoBSignUp.setText("");
@@ -388,11 +415,6 @@ public class SignUpJPanel extends javax.swing.JPanel {
     private void txtDoBSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoBSignUpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDoBSignUpActionPerformed
-
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        new MainJFrame(SignUpDirectory, HospitalDirectory, DoctorDirectory, PatientDirectory, EncounterDirectory, VitalsDirectory).setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnBackActionPerformed
 
     private void txtPinCodeSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPinCodeSignUpActionPerformed
         // TODO add your handling code here:
@@ -444,8 +466,8 @@ public class SignUpJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_txtConfirmPasswordSignUpKeyPressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSignUp;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblCity;

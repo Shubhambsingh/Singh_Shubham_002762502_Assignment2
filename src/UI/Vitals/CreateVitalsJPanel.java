@@ -90,6 +90,9 @@ public class CreateVitalsJPanel extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
         tblEncounterDirectory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -255,7 +258,7 @@ public class CreateVitalsJPanel extends javax.swing.JPanel {
                                                     .addComponent(txtBPD)
                                                     .addComponent(txtTimeStamp, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                         .addComponent(txtPatientName, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,7 +308,7 @@ public class CreateVitalsJPanel extends javax.swing.JPanel {
                     .addComponent(txtBPD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnRecordVitals)
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addContainerGap(217, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
